@@ -31,7 +31,7 @@ app:
     expiration: 86400000
 
 stripe:
-  secret-key: sk_test_51TndwRCwfjLN94ewU5mRWMSVCTqtxY181ObWdj6cWdZg9EAq7IT6Prv6KpgwWB6o0LW8fzh9DG0Drf5fXMqQETus0080DBAYcx
-
+  secret-key: ${STRIPE_SECRET_KEY:sk_test_VOTRE_CLE_ICI}
+  
 cors:
   allowed-origins: http://localhost:4200
