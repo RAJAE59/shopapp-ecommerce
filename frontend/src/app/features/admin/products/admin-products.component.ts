@@ -64,7 +64,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
             <div class="form-row">
               <mat-form-field appearance="outline">
-                <mat-label>Prix (€)</mat-label>
+                <mat-label>Prix (DH)</mat-label>
                 <input matInput type="number" step="0.01" formControlName="prix">
                 <mat-icon matSuffix>euro</mat-icon>
                 <mat-error>Prix obligatoire</mat-error>

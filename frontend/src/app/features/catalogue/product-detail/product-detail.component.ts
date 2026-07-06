@@ -78,7 +78,7 @@ import { Product } from '../../../shared/models';
             <div class="delivery-info">
               <div class="delivery-item">
                 <mat-icon>local_shipping</mat-icon>
-                <span>Livraison gratuite dès 50€</span>
+                <span>Livraison gratuite dès 50DH</span>
               </div>
               <div class="delivery-item">
                 <mat-icon>replay</mat-icon>
