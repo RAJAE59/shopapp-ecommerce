@@ -1,0 +1,57 @@
+<!-- navbar.component.html -->
+<mat-toolbar color="primary" class="navbar">
+  <a routerLink="/" class="brand">
+    <mat-icon>shopping_bag</mat-icon>
+    <span>ShopApp</span>
+  </a>
+
+  <span class="spacer"></span>
+
+  <nav class="nav-links">
+    <a mat-button routerLink="/catalogue" routerLinkActive="active">
+      <mat-icon>store</mat-icon> Catalogue
+    </a>
+
+    <ng-container *ngIf="isLoggedIn">
+      <a mat-button routerLink="/cart">
+        <mat-icon [matBadge]="cartCount" matBadgeColor="accent" [matBadgeHidden]="cartCount === 0">
+          shopping_cart
+        </mat-icon>
+        Panier
+      </a>
+
+      <a mat-button routerLink="/orders">Mes commandes</a>
+
+      <ng-container *ngIf="isAdmin">
+        <a mat-button [matMenuTriggerFor]="adminMenu">
+          <mat-icon>admin_panel_settings</mat-icon> Admin
+        </a>
+        <mat-menu #adminMenu="matMenu">
+          <a mat-menu-item routerLink="/admin/dashboard">
+            <mat-icon>dashboard</mat-icon> Dashboard
+          </a>
+          <a mat-menu-item routerLink="/admin/products">
+            <mat-icon>inventory</mat-icon> Produits
+          </a>
+          <a mat-menu-item routerLink="/admin/orders">
+            <mat-icon>receipt_long</mat-icon> Commandes
+          </a>
+        </mat-menu>
+      </ng-container>
+
+      <button mat-button [matMenuTriggerFor]="userMenu">
+        <mat-icon>account_circle</mat-icon> {{ userName }}
+      </button>
+      <mat-menu #userMenu="matMenu">
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>logout</mat-icon> Déconnexion
+        </button>
+      </mat-menu>
+    </ng-container>
+
+    <ng-container *ngIf="!isLoggedIn">
+      <a mat-button routerLink="/login">Connexion</a>
+      <a mat-raised-button color="accent" routerLink="/register">S'inscrire</a>
+    </ng-container>
+  </nav>
+</mat-toolbar>
