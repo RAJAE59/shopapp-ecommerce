@@ -14,7 +14,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
         <h3>{{ product.nom }}</h3>
         <p class="description">{{ product.description | slice:0:80 }}...</p>
         <div class="price-stock">
-          <span class="price">{{ product.prix | currency:'EUR':'symbol':'1.2-2' }}</span>
+          <span class="price">{{ product.prix | currency:'MAD':'symbol':'1.2-2' }}</span>
           <span class="stock" [class.low-stock]="product.stock < 5">
             {{ product.stock > 0 ? 'En stock (' + product.stock + ')' : 'Rupture' }}
           </span>

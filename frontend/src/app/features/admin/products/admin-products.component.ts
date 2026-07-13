@@ -117,7 +117,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
             <ng-container matColumnDef="prix">
               <th mat-header-cell *matHeaderCellDef>Prix</th>
-              <td mat-cell *matCellDef="let p">{{ p.prix | currency:'EUR' }}</td>
+              <td mat-cell *matCellDef="let p">{{ p.prix | currency:'MAD' }}</td>
             </ng-container>
 
             <ng-container matColumnDef="stock">

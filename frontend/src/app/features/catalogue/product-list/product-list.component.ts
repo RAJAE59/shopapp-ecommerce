@@ -74,7 +74,7 @@ import { Product, Category } from '../../../shared/models';
             <h3>{{ product.nom }}</h3>
             <p class="description">{{ product.description | slice:0:80 }}...</p>
             <div class="price-row">
-              <span class="price">{{ product.prix | currency:'EUR' }}</span>
+              <span class="price">{{ product.prix | currency:'MAD' }}</span>
               <span class="stock" [class.out]="product.stock === 0">
                 {{ product.stock > 0 ? product.stock + ' en stock' : 'Rupture' }}
               </span>

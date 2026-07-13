@@ -39,7 +39,7 @@ import { CartItem } from '../../shared/models';
             <div class="item-info">
               <h3>{{ item.product.nom }}</h3>
               <p class="item-category">{{ item.product.category?.nom }}</p>
-              <p class="item-price">{{ item.product.prix | currency:'EUR' }} / unité</p>
+              <p class="item-price">{{ item.product.prix | currency:'MAD' }} / unité</p>
             </div>
             <div class="item-quantity">
               <button mat-icon-button (click)="decreaseQty(item)">
@@ -52,7 +52,7 @@ import { CartItem } from '../../shared/models';
               </button>
             </div>
             <div class="item-total">
-              <strong>{{ (item.product.prix * item.quantite) | currency:'EUR' }}</strong>
+              <strong>{{ (item.product.prix * item.quantite) | currency:'MAD' }}</strong>
             </div>
             <button mat-icon-button color="warn" (click)="removeItem(item)">
               <mat-icon>delete</mat-icon>
@@ -68,14 +68,14 @@ import { CartItem } from '../../shared/models';
 
             <div class="summary-row" *ngFor="let item of items">
               <span>{{ item.product.nom }} x{{ item.quantite }}</span>
-              <span>{{ (item.product.prix * item.quantite) | currency:'EUR' }}</span>
+              <span>{{ (item.product.prix * item.quantite) | currency:'MAD' }}</span>
             </div>
 
             <mat-divider></mat-divider>
 
             <div class="summary-row total">
               <strong>Total</strong>
-              <strong class="total-price">{{ totalPrice | currency:'EUR' }}</strong>
+              <strong class="total-price">{{ totalPrice | currency:'MAD' }}</strong>
             </div>
 
             <a mat-raised-button color="primary" routerLink="/checkout" class="checkout-btn">

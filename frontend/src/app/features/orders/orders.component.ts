@@ -48,7 +48,7 @@ import { Order } from '../../shared/models';
             </mat-panel-title>
             <mat-panel-description>
               <span>{{ order.createdAt | date:'dd/MM/yyyy HH:mm' }}</span>
-              <strong class="order-total">{{ order.total | currency:'EUR' }}</strong>
+              <strong class="order-total">{{ order.total | currency:'MAD' }}</strong>
             </mat-panel-description>
           </mat-expansion-panel-header>
 
@@ -62,7 +62,7 @@ import { Order } from '../../shared/models';
                 <span class="item-name">{{ item.product?.nom }}</span>
                 <span class="item-qty">× {{ item.quantite }}</span>
               </div>
-              <span class="item-price">{{ (item.prixUnitaire * item.quantite) | currency:'EUR' }}</span>
+              <span class="item-price">{{ (item.prixUnitaire * item.quantite) | currency:'MAD' }}</span>
             </div>
 
             <mat-divider></mat-divider>
@@ -74,7 +74,7 @@ import { Order } from '../../shared/models';
               </div>
               <div class="order-total-row">
                 <span>Total payé</span>
-                <strong>{{ order.total | currency:'EUR' }}</strong>
+                <strong>{{ order.total | currency:'MAD' }}</strong>
               </div>
             </div>
 

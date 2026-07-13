@@ -69,7 +69,7 @@ import { Order } from '../../../shared/models';
             <ng-container matColumnDef="total">
               <th mat-header-cell *matHeaderCellDef>Total</th>
               <td mat-cell *matCellDef="let o">
-                <strong class="total">{{ o.total | currency:'EUR' }}</strong>
+                <strong class="total">{{ o.total | currency:'MAD' }}</strong>
               </td>
             </ng-container>
 

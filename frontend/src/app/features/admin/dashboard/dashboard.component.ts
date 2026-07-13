@@ -35,7 +35,7 @@ interface Stats {
           <mat-card-content>
             <div class="stat-icon"><mat-icon>euro</mat-icon></div>
             <div class="stat-info">
-              <h3>{{ stats.totalRevenue | currency:'EUR' }}</h3>
+              <h3>{{ stats.totalRevenue | currency:'MAD' }}</h3>
               <p>Chiffre d'affaires</p>
             </div>
           </mat-card-content>

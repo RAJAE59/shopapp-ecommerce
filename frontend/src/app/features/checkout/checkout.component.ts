@@ -71,12 +71,12 @@ import { CartItem, Order } from '../../shared/models';
               <div class="step-content">
                 <div class="review-item" *ngFor="let item of items">
                   <span>{{ item.product.nom }} x{{ item.quantite }}</span>
-                  <span>{{ (item.product.prix * item.quantite) | currency:'EUR' }}</span>
+                  <span>{{ (item.product.prix * item.quantite) | currency:'MAD' }}</span>
                 </div>
                 <mat-divider></mat-divider>
                 <div class="review-item total">
                   <strong>Total</strong>
-                  <strong class="total-amount">{{ totalPrice | currency:'EUR' }}</strong>
+                  <strong class="total-amount">{{ totalPrice | currency:'MAD' }}</strong>
                 </div>
                 <div class="step-actions">
                   <button mat-button matStepperPrevious>Retour</button>
@@ -115,7 +115,7 @@ import { CartItem, Order } from '../../shared/models';
                       <span>Carte test : <strong>4242 4242 4242 4242</strong> — 12/26 — 123</span>
                     </div>
                     <button mat-raised-button color="primary" class="pay-btn" (click)="processPayment()" [disabled]="paymentLoading">
-                      <span *ngIf="!paymentLoading">Payer {{ createdOrder.total | currency:'EUR' }}</span>
+                      <span *ngIf="!paymentLoading">Payer {{ createdOrder.total | currency:'MAD' }}</span>
                       <span *ngIf="paymentLoading">Traitement...</span>
                     </button>
                   </mat-card-content>
@@ -130,12 +130,12 @@ import { CartItem, Order } from '../../shared/models';
             <h3>Votre commande</h3>
             <div class="summary-item" *ngFor="let item of items">
               <span class="item-name">{{ item.product.nom }}</span>
-              <span>x{{ item.quantite }} — {{ (item.product.prix * item.quantite) | currency:'EUR' }}</span>
+              <span>x{{ item.quantite }} — {{ (item.product.prix * item.quantite) | currency:'MAD' }}</span>
             </div>
             <mat-divider></mat-divider>
             <div class="summary-total">
               <span>Total</span>
-              <strong>{{ totalPrice | currency:'EUR' }}</strong>
+              <strong>{{ totalPrice | currency:'MAD' }}</strong>
             </div>
           </mat-card-content>
         </mat-card>

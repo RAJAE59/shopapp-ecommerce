@@ -47,7 +47,7 @@ import { Product } from '../../../shared/models';
             <mat-chip class="category-chip">{{ product.category?.nom }}</mat-chip>
             <h1>{{ product.nom }}</h1>
             <div class="price-block">
-              <span class="price">{{ product.prix | currency:'EUR' }}</span>
+              <span class="price">{{ product.prix | currency:'MAD' }}</span>
               <span class="stock-info">{{ product.stock }} unités disponibles</span>
             </div>
 
@@ -67,7 +67,7 @@ import { Product } from '../../../shared/models';
               </div>
               <button mat-raised-button color="primary" class="add-btn" (click)="addToCart()">
                 <mat-icon>shopping_cart</mat-icon>
-                Ajouter au panier — {{ product.prix * qty | currency:'EUR' }}
+                Ajouter au panier — {{ product.prix * qty | currency:'MAD' }}
               </button>
             </div>
 
