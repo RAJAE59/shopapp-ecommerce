@@ -5,7 +5,7 @@ import { Product, Category, PageResponse } from '../../shared/models';
 
 @Injectable({ providedIn: 'root' })
 export class ProductService {
-  private apiUrl = 'http://localhost:8080/api';
+  private apiUrl = 'https://rococo-kulfi-ea4908.netlify.app/api';
 
   constructor(private http: HttpClient) {}
 

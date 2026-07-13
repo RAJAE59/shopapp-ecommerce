@@ -95,7 +95,7 @@ cd backend
 # - stripe.secret-key (depuis https://dashboard.stripe.com/test/apikeys)
 
 mvn spring-boot:run
-# API disponible sur http://localhost:8080
+# API disponible sur https://rococo-kulfi-ea4908.netlify.app
 ```
 
 ### 3. Frontend

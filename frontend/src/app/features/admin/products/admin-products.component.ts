@@ -225,8 +225,8 @@ export class AdminProductsComponent implements OnInit {
     if (imageUrl) params = params.set('imageUrl', imageUrl);
 
     const request$ = this.editingProduct
-      ? this.http.put<Product>(`http://localhost:8080/api/products/${this.editingProduct.id}`, null, { params })
-      : this.http.post<Product>(`http://localhost:8080/api/products`, null, { params });
+      ? this.http.put<Product>(`https://rococo-kulfi-ea4908.netlify.app/api/products/${this.editingProduct.id}`, null, { params })
+      : this.http.post<Product>(`https://rococo-kulfi-ea4908.netlify.app/api/products`, null, { params });
 
     request$.subscribe({
       next: () => {
