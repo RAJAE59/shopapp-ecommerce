@@ -225,8 +225,8 @@ export class AdminProductsComponent implements OnInit {
     if (imageUrl) params = params.set('imageUrl', imageUrl);
 
     const request$ = this.editingProduct
-      ? this.http.put<Product>(`https://rococo-kulfi-ea4908.netlify.app/api/products/${this.editingProduct.id}`, null, { params })
-      : this.http.post<Product>(`https://rococo-kulfi-ea4908.netlify.app/api/products`, null, { params });
+      ? this.http.put<Product>(`https://app-99525641-4e5f-4149-87c2-05d9cad21b16.cleverapps.io/api/products/${this.editingProduct.id}`, null, { params })
+      : this.http.post<Product>(`https://app-99525641-4e5f-4149-87c2-05d9cad21b16.cleverapps.io/api/products`, null, { params });
 
     request$.subscribe({
       next: () => {

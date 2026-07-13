@@ -1,7 +1,9 @@
-backend/target/
+
 frontend/node_modules/
 frontend/dist/
 *.class
 .env
+frontend/.angular/
+!backend/target/ecommerce-backend-1.0.0.jar
 
 

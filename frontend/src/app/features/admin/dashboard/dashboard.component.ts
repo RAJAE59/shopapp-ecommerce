@@ -142,7 +142,7 @@ export class DashboardComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get<Stats>('https://rococo-kulfi-ea4908.netlify.app/api/admin/stats').subscribe(s => this.stats = s);
-    this.http.get<any[]>('https://rococo-kulfi-ea4908.netlify.app/api/admin/products/low-stock').subscribe(p => this.lowStockProducts = p);
+    this.http.get<Stats>('https://app-99525641-4e5f-4149-87c2-05d9cad21b16.cleverapps.io/api/admin/stats').subscribe(s => this.stats = s);
+    this.http.get<any[]>('https://app-99525641-4e5f-4149-87c2-05d9cad21b16.cleverapps.io/api/admin/products/low-stock').subscribe(p => this.lowStockProducts = p);
   }
 }

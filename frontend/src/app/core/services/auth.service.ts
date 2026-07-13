@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private apiUrl = 'https://rococo-kulfi-ea4908.netlify.app/api/auth';
+  private apiUrl = 'https://app-99525641-4e5f-4149-87c2-05d9cad21b16.cleverapps.io/api/auth';
   private currentUserSubject = new BehaviorSubject<AuthResponse | null>(this.getStoredUser());
   currentUser$ = this.currentUserSubject.asObservable();
 
